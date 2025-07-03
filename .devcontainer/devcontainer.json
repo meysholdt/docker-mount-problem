@@ -1,0 +1,19 @@
+{
+	"name": "Gitpod",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+    
+    "workspaceFolder": "/workspace/docker-mount-problem1",// Bind the local project folder into the container
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace/docker-mount-problem1,type=bind",
+    
+    "mounts": [
+        {
+            "source": "/var/run/docker.sock",
+            "target": "/var/run/docker.sock",
+            "type": "bind"
+        }
+    ],
+    "features": {
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+        }
+    }
+}
